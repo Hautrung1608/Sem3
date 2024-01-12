@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { BsCheckCircleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { logoLight } from "../../assets/images";
 
+import data from "../../database/db.json"
 const SignIn = () => {
   // ============= Initial State Start here =============
   const [email, setEmail] = useState("");
@@ -43,6 +42,8 @@ const SignIn = () => {
       setPassword("");
     }
   };
+
+  
   return (
     <div className="w-full h-screen flex items-center justify-center">
       <div className="w-1/4 hidden lgl:inline-flex h-full text-white">

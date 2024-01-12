@@ -16,6 +16,9 @@ function App() {
       <Routes>
         <Route path="/" element={<DefaultLayout page={<Home />} />} />
         <Route path="/about" element={<DefaultLayout page={<About />} />} />
+        <Route path="/contact" element={<DefaultLayout page={<Contact />} />} />
+
+
         <Route path="/signin" element={<DefaultLayout page={<SignIn />} />} />
         <Route path="/signup" element={<DefaultLayout page={<SignUp />} />} />
         
