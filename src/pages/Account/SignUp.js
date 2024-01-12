@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -82,9 +83,9 @@ const SignUp = () => {
         EmailValidation(email) &&
         password &&
         password.length >= 6 &&
-        address 
+        address
       ) {
-       
+
         setClientName("");
         setEmail("");
         setPhone("");
@@ -93,6 +94,23 @@ const SignUp = () => {
       }
     }
   };
+  const body = JSON.stringify({
+        username:clientName,
+        emailadd:email,
+        phonenum:phone,
+        addressss:address
+  })
+  const handleSubmit = () => {
+    console.log("submitted")
+    axios.post("http://localhost:8000/account", body)
+      .then(function (response) {
+        console.log(response)
+      }).catch(function (err) {
+        console.log(err)
+
+      })
+
+  }
   return (
     <div className="w-full h-screen flex items-center justify-start">
       <div className="w-1/3 hidden lgl:inline-flex h-full text-white">
@@ -113,7 +131,7 @@ const SignUp = () => {
             </Link>
           </div>
         ) : (
-          <form className="w-full lgl:w-[500px] h-screen flex items-center justify-center">
+          <form action="#" className="w-full lgl:w-[500px] h-screen flex items-center justify-center" onSubmit={handleSubmit}>
             <div className="px-6 py-4 w-full h-[96%] flex flex-col justify-start overflow-y-scroll scrollbar-thin scrollbar-thumb-primeColor">
               <h1 className="font-titleFont underline underline-offset-4 decoration-[1px] font-semibold text-2xl mdl:text-3xl mb-4">
                 Create your account
@@ -214,8 +232,8 @@ const SignUp = () => {
                     </p>
                   )}
                 </div>
-                
-                
+
+
                 {/* Checkbox */}
                 <div className="flex items-start mdl:items-center gap-2">
                   <input
@@ -224,18 +242,17 @@ const SignUp = () => {
                     type="checkbox"
                   />
                   <p className="text-sm text-primeColor">
-                    I agree to the OREBI{" "}
+                    I agree to the {" "}
                     <span className="text-blue-500">Terms of Service </span>and{" "}
                     <span className="text-blue-500">Privacy Policy</span>.
                   </p>
                 </div>
                 <button
-                  onClick={handleSignUp}
-                  className={`${
-                    checked
-                      ? "bg-primeColor hover:bg-black hover:text-white cursor-pointer"
-                      : "bg-gray-500 hover:bg-gray-500 hover:text-gray-200 cursor-none"
-                  } w-full text-gray-200 text-base font-medium h-10 rounded-md hover:text-white duration-300`}
+                  type="submit"
+                  className={`${checked
+                    ? "bg-primeColor hover:bg-black hover:text-white cursor-pointer"
+                    : "bg-gray-500 hover:bg-gray-500 hover:text-gray-200 cursor-none"
+                    } w-full text-gray-200 text-base font-medium h-10 rounded-md hover:text-white duration-300`}
                 >
                   Create Account
                 </button>

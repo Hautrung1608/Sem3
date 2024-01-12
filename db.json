@@ -1,0 +1,51 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title"
+    },
+    {
+      "id": "2",
+      "title": "another title"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "accounts": [
+    {
+      "id": "1",
+      "username": "Malcom",
+      "emailadd": "dasdsadasD@gmail.com",
+      "phonenum": "33333333333333333",
+      "passwords": "222222",
+      "addressss": "deo biet"
+    },
+    {
+      "id": "c339",
+      "username": "32132132121",
+      "emailadd": "213123213@2gmailc",
+      "phonenum": "213213213213",
+      "addressss": "123213312321"
+    },
+    {
+      "id": "a7d6",
+      "username": "asdasdasd",
+      "emailadd": "asdasdkaspdk@gmail.com",
+      "phonenum": "213123",
+      "addressss": "12321312321321"
+    }
+  ]
+}
