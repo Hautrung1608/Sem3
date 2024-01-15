@@ -32,3 +32,6 @@ nav .active li {
   display: none;
 }
 /* ============= NavLink active End here ================ */
+.bg{
+  background-color: black;
+}
