@@ -9,17 +9,17 @@ export default function HeaderGuest() {
     >
       <li>Home</li>
     </Link>
-    <Link to="feedback"
+    <Link to="/feedback"
       className="flex font-normal hover:font-bold w-20 h-6 justify-center items-center px-12 text-base text-[#767676] hover:underline underline-offset-[4px] decoration-[1px] hover:text-[#262626] md:border-r-[2px] border-r-gray-300 hoverEffect last:border-r-0"
     >
       <li>Feedback</li>
     </Link>
-    <Link to="about"
+    <Link to="/about"
       className="flex font-normal hover:font-bold w-20 h-6 justify-center items-center px-12 text-base text-[#767676] hover:underline underline-offset-[4px] decoration-[1px] hover:text-[#262626] md:border-r-[2px] border-r-gray-300 hoverEffect last:border-r-0"
     >
       <li>About</li>
     </Link>
-    <Link to="about"
+    <Link to="/contact"
       className="flex font-normal hover:font-bold w-20 h-6 justify-center items-center px-12 text-base text-[#767676] hover:underline underline-offset-[4px] decoration-[1px] hover:text-[#262626] md:border-r-[2px] border-r-gray-300 hoverEffect last:border-r-0"
     >
       <li>Contact</li>
