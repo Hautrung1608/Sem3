@@ -30,7 +30,9 @@ const Feedback = () => {
                             <label class="block text-gray-700 text-l font-bold mb-2" for="Fullname">
                                 Fullname
                             </label>
-                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="fullnae" type="text" placeholder="Insert your Fullname ...*" required />
+                            <input
+                                {...register("fullname")}
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="fullname" type="text" placeholder="Insert your Fullname ...*" />
                         </div>
                         <div class="mb-6">
                             <label class="block text-gray-700 text-l font-bold mb-2" for="Email">
@@ -48,7 +50,9 @@ const Feedback = () => {
                             <label class="block text-gray-700 text-l font-bold mb-2" for="Content">
                                 Content
                             </label>
-                            <textarea rows="10" class="shadow appearance-none border border-red-500 rounded w-full px-3 py-2 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="content" type="textarea" placeholder='Insert your Content ....*' required />
+                            <textarea
+                                {...register("content")}
+                                rows="10" class="shadow appearance-none border border-red-500 rounded w-full px-3 py-2 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="content" type="textarea" placeholder='Insert your Content ....*' />
                         </div>
                         <div class="flex items-center justify-center">
                             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-10 rounded focus:outline-none focus:shadow-outline" type="submit">
