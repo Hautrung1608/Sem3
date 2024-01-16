@@ -52,7 +52,7 @@ const Feedback = () => {
                             </label>
                             <textarea
                                 {...register("content")}
-                                rows="10" class="shadow appearance-none border border-red-500 rounded w-full px-3 py-2 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="content" type="textarea" placeholder='Insert your Content ....*' />
+                                rows="10" class="shadow appearance-none border border-red-500 rounded w-full px-3 py-2 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="content" type="text" placeholder='Insert your Content ....*' />
                         </div>
                         <div class="flex items-center justify-center">
                             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-10 rounded focus:outline-none focus:shadow-outline" type="submit">
